@@ -9,7 +9,6 @@ public class LionAlexTest {
 
     @Test
     public void getFriendsReturnsCorrectList() throws Exception {
-        // Создаем мок зависимости Feline для передачи в конструктор
         Feline feline = Mockito.mock(Feline.class);
         LionAlex alex = new LionAlex(feline);
 

@@ -38,6 +38,7 @@ public class LionTest {
         Exception exception = assertThrows(Exception.class, () -> {
             new Lion(feline, "Трансгендер");
         });
+
         Assert.assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
     }
 
