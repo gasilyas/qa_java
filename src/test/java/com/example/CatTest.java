@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class CatTest {
 
     @Mock
-    Feline feline;
+    private Feline feline;
 
     @Test
     public void getSoundReturnsMeow() {
@@ -23,9 +23,9 @@ public class CatTest {
     @Test
     public void getFoodReturnsMeatSources() throws Exception {
         Cat cat = new Cat(feline);
-        Mockito.when(feline.eatMeat().thenReturn(List.of("Животные", "Птицы", "Рыба"));
-
         List<String> meatSources = List.of("Животные", "Птицы", "Рыба");
+
+        Mockito.when(feline.eatMeat()).thenReturn(meatSources);
         assertEquals(meatSources, cat.getFood());
     }
 }
